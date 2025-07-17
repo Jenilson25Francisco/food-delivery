@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FlatList, Text, View } from 'react-native'
+import { FlatList } from 'react-native'
 import { RestaurantItem } from './restaurant-item'
 
 export type RestaurantsProps = {

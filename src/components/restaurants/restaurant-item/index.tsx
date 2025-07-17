@@ -1,5 +1,5 @@
 import { Text, View } from 'react-native'
-import { RestaurantsProps } from '..'
+import type { RestaurantsProps } from '..'
 
 export function RestaurantItem({ item }: { item: RestaurantsProps }) {
   return (

@@ -1,5 +1,5 @@
 import { Image, Pressable, Text, View } from 'react-native'
-import { FoodProps } from '..'
+import type { FoodProps } from '..'
 import { Ionicons } from '@expo/vector-icons'
 
 export function CardFood({ food }: { food: FoodProps }) {
