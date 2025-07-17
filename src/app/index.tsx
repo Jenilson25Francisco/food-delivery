@@ -1,9 +1,39 @@
-import { Text, View } from 'react-native'
+import Constants from 'expo-constants'
+import { ScrollView, View } from 'react-native'
+import { Header } from '@/components/header'
+import { Banner } from '@/components/banner'
+import { SearchInput } from '@/components/search-input'
+import { Section } from '@/components/section'
+import { Tranding } from '@/components/tranding'
+import { Restaurants } from '@/components/restaurants'
+
+const statusBarHeight = Constants.statusBarHeight
 
 export default function Home() {
   return (
-    <View className="flex flex-1 items-center justify-center">
-      <Text className="text-xl">Olá, Jenilson</Text>
-    </View>
+    <ScrollView
+      className="flex-1 bg-slate-200"
+      showsVerticalScrollIndicator={false}
+    >
+      <View className="flex-1 px-4" style={{ marginTop: statusBarHeight + 8 }}>
+        <Header />
+        <Banner />
+        <SearchInput />
+      </View>
+      <Section
+        name="Comidas em alta"
+        label="Veja mais"
+        action={() => console.log('clicou no botão')}
+        size="text-2xl"
+      />
+      <Tranding />
+      <Section
+        name="Famosos no KambaFood"
+        label="Veja todos"
+        action={() => console.log('clicou no botão')}
+        size="text-xl"
+      />
+      <Restaurants />
+    </ScrollView>
   )
 }
