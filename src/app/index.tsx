@@ -6,6 +6,7 @@ import { SearchInput } from '@/components/search-input'
 import { Section } from '@/components/section'
 import { Tranding } from '@/components/tranding'
 import { Restaurants } from '@/components/restaurants'
+import { RestaurantVerticalList } from '@/components/restaurant-vertical-list'
 
 const statusBarHeight = Constants.statusBarHeight
 
@@ -34,6 +35,13 @@ export default function Home() {
         size="text-xl"
       />
       <Restaurants />
+      <Section
+        name="Restaurantes"
+        label="Veja todos"
+        action={() => console.log('clicou no botão')}
+        size="text-xl"
+      />
+      <RestaurantVerticalList />
     </ScrollView>
   )
 }
