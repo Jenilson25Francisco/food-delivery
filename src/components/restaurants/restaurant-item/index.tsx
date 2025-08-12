@@ -1,10 +1,16 @@
-import { Text, View } from 'react-native'
+import { Image, Pressable, Text } from 'react-native'
 import type { RestaurantsProps } from '..'
 
 export function RestaurantItem({ item }: { item: RestaurantsProps }) {
   return (
-    <View>
-      <Text>restaurant</Text>
-    </View>
+    <Pressable className='flex-col items-center justify-center'>
+      <Image source={{ uri: item.image }} className='w-20 h-20 rounded-full' />
+      <Text
+       className='mt-2 text-sm w-20 text-center leading-2'
+        numberOfLines={2}
+        >
+        {item.name}
+      </Text>
+    </Pressable>
   )
 }

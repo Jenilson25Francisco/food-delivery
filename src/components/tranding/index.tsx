@@ -18,7 +18,7 @@ export function Tranding() {
 
   useEffect(() => {
     async function getFoods() {
-      const response = await fetch('http://192.168.1.8:3000/foods')
+      const response = await fetch('http://192.168.1.3:3000/foods')
       const data = await response.json()
       setFoods(data)
     }
